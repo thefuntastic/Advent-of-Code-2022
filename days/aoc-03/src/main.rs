@@ -14,6 +14,9 @@ fn main() {
 
     println!("Total {total}");
 
+    //From other solutions
+    //input.lines().array_chunks::<3>()
+
     let lines: Vec<&str> = input.lines().collect();
     let lns = &lines[0..];
     let total: u32 = lns
@@ -26,6 +29,9 @@ fn main() {
 }
 
 fn parse_lines(ln: &str) -> (&str, &str) {
+    //From other solutions
+    //ln.split_at(mid)
+
     let mid = ln.len() / 2;
 
     let a = &ln[0..mid];
@@ -56,6 +62,9 @@ fn score(n: char) -> u32 {
 fn parse_common(group: &[&str]) -> char {
     let set_b: HashSet<char> = group[1].chars().collect();
     let set_c: HashSet<char> = group[2].chars().collect();
+
+    //From other solutions
+    //set_b.intersection(set_c)
 
     let result = group[0]
         .chars()
