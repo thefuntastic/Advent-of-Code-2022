@@ -1,7 +1,5 @@
 #![feature(slice_group_by)]
 
-use std::fs;
-
 #[derive(Copy, Clone)]
 pub enum Choice {
     RockAX,
@@ -130,11 +128,8 @@ fn score(round: Round) -> u32 {
 pub struct Play {}
 
 fn main() {
-    let input =
-        fs::read_to_string("D:/Projects/tests/advent-of-code-2022/aoc-02/input/input.txt").unwrap();
-    let example =
-        fs::read_to_string("D:/Projects/tests/advent-of-code-2022/aoc-02/input/example.txt")
-            .unwrap();
+    let example = include_str!("../input/example.txt");
+    let input = include_str!("../input/input.txt");
 
     let lines: Vec<&str> = input.lines().collect();
 
