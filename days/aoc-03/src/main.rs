@@ -37,13 +37,9 @@ fn parse_lines(ln: &str) -> (&str, &str) {
 fn compare(a: &str, b: &str) -> char {
     let set: HashSet<char> = a.chars().collect();
 
-    for ch in b.chars() {
-        if set.contains(&ch) {
-            return ch;
-        }
-    }
+    let common = b.chars().filter(|ch| set.contains(ch)).next();
 
-    return '0';
+    common.unwrap()
 }
 
 fn score(n: char) -> u32 {
@@ -58,12 +54,11 @@ fn score(n: char) -> u32 {
 }
 
 fn parse_common(group: &[&str]) -> char {
-    let set_a: HashSet<char> = group[0].chars().collect();
     let set_b: HashSet<char> = group[1].chars().collect();
     let set_c: HashSet<char> = group[2].chars().collect();
 
-    let result = set_a
-        .iter()
+    let result = group[0]
+        .chars()
         .filter(|ch| set_b.contains(ch))
         .filter(|ch| set_c.contains(ch))
         .next();
