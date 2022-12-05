@@ -18,6 +18,13 @@ name = "aoc-04"
 version = "0.1.0"
 
 [[package]]
+name = "aoc-05"
+version = "0.1.0"
+dependencies = [
+ "iter_tools",
+]
+
+[[package]]
 name = "either"
 version = "1.8.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"

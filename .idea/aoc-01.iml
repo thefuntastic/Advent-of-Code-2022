@@ -6,6 +6,7 @@
       <sourceFolder url="file://$MODULE_DIR$/days/aoc-03/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/days/aoc-04/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/days/aoc-05/src" isTestSource="false" />
       <excludeFolder url="file://$MODULE_DIR$/target" />
       <excludeFolder url="file://$MODULE_DIR$/days/aoc-02/target" />
       <excludeFolder url="file://$MODULE_DIR$/days/aoc-03/target" />
