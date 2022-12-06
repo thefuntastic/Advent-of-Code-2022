@@ -32,21 +32,17 @@ fn main() {
     println!("First index {}", index);
 
     //Pro tips
-    //window.iter().unique().count() instead of the set, but does the same internally anyway
+    //window.iter().unique().count() instead of the set, but does the same internally anyway, use a set
 
     //Part 2 - fine, make me do it properly
     let index: usize = input
         .windows(14)
-        .enumerate()
-        .find_map(|(i, items)| {
+        .position(|items| {
             set.clear();
             set.extend(items);
-            if set.len() == 14 {
-                return Some(i + 14);
-            } else {
-                return None;
-            }
+            return set.len() == 14;
         })
+        .map(|i| i + 14)
         .unwrap();
 
     println!("Second index {}", index);
